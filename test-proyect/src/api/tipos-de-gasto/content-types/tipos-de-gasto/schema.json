@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipos_de_gastos",
+  "info": {
+    "singularName": "tipos-de-gasto",
+    "pluralName": "tipos-de-gastos",
+    "displayName": "Tipos de gasto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tipo": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "tipos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gasto.gasto",
+      "mappedBy": "tipos_de_gasto"
+    }
+  }
+}
