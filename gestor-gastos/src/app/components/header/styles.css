@@ -4,6 +4,10 @@ header {
     align-items: center;
     padding: 1rem;
     background-color: var(--background-container);
+    margin-bottom: 1rem;
+}
+
+header h1{
     color: var(--color-emphasis);
 }
 
@@ -11,4 +15,20 @@ header nav ul {
     display: flex;
     align-items: center;
     gap: .5rem;
+}
+
+header nav ul li {
+    transition: all 150ms ease;
+}
+
+header nav ul li:not(.active):hover {
+    color: var(--color-emphasis);
+}
+
+header nav ul li.active a {
+    color: var(--color-emphasis);
+}
+
+header nav ul li.active a::after {
+    content: '';
 }

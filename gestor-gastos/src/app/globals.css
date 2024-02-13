@@ -19,6 +19,10 @@
   }
 }
 
+*{
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
   color: rgb(var(--foreground-rgb));
@@ -34,4 +38,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+.container {
+  margin-inline: 1rem;
+  padding: .5rem;
+  width: calc(100% - 2rem);
+  background-color: var(--background-container);
+  border-radius: 5px;
 }
