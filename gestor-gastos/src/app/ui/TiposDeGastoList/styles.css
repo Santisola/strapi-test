@@ -1,0 +1,19 @@
+.tiposDeGastosList {
+    margin-top: 1rem;
+    background-color: transparent;
+    display: flex;
+    gap: .5rem;
+    overflow: auto;
+    padding: 0;
+}
+
+.tiposDeGastosList > li {
+    padding: .5rem;
+    background-color: var(--background-container);
+    border-radius: 5px;
+    min-width: 28%;
+}
+
+.tiposDeGastosList > li strong{
+    color: var(--color-emphasis);
+}

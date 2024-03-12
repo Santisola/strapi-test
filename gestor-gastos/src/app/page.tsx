@@ -2,7 +2,7 @@ import { HomeDashboard } from "./homeDashboard/HomeDashboard";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div>
       <HomeDashboard />
     </div>
   );

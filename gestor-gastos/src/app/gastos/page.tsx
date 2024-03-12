@@ -1,13 +1,13 @@
+import { getGastos } from "../lib/data";
 import { GastosTable } from "./components/GastosTable/GastosTable";
 
 export default async function Gastos() {
-  const fetchRes = await fetch('http://localhost:1337/api/gastos?populate=*')
-  const rta = await fetchRes.json()
+  const gastos = await getGastos();
 
   return (
     <div className="container">
       <h1>Gastos</h1>
-      {rta && <GastosTable gastos={rta.data} />}
+      {gastos && <GastosTable gastos={gastos} />}
     </div>
   );
 }

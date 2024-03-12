@@ -28,7 +28,7 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::tipos-de-gasto.tipos-de-gasto",
-      "inversedBy": "tipos"
+      "inversedBy": "gastos"
     }
   }
 }

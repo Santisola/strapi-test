@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tipos-de-gasto",
     "pluralName": "tipos-de-gastos",
-    "displayName": "Tipos de gasto"
+    "displayName": "Tipos de gasto",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,7 +17,7 @@
       "unique": true,
       "required": true
     },
-    "tipos": {
+    "gastos": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::gasto.gasto",
