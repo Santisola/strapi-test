@@ -1,6 +1,7 @@
 import React from 'react'
 import { getGastos, getGastosPorTipo } from '../lib/data'
 import { TiposDeGastoList } from '../ui/TiposDeGastoList/TiposDeGastoList';
+import { BottomNav } from '../ui/BottomNav/BottomNav';
 
 export const HomeDashboard = async () => {
   const gastos = await getGastos();
@@ -29,6 +30,8 @@ export const HomeDashboard = async () => {
     </div>
     
     <TiposDeGastoList gastos={tiposDeGastos} />
+
+    <BottomNav />
     </>
   )
 }

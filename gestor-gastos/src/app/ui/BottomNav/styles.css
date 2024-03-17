@@ -1,0 +1,14 @@
+#bottomNav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-container);
+}
+
+#bottomNav ul {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 3rem;
+}
