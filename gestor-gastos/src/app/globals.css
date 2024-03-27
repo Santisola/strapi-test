@@ -9,6 +9,7 @@
   --color-emphasis: #9eff4f;
   --background-container: #262626;
   --background-button: #444;
+  --form-field-background: #3d3d3d;
 }
 
 @media (prefers-color-scheme: dark) {
