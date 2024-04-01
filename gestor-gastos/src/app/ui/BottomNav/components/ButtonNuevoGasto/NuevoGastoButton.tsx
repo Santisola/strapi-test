@@ -10,7 +10,7 @@ export const NuevoGastoButton = ({
   return (
     <button
       className={clsx(
-        'btn btn-primary btnNuevoGasto',
+        'btnNuevoGasto',
         {
           'isOpen': isOpen,
         },

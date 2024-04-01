@@ -4,6 +4,7 @@
     left: 0;
     right: 0;
     background-color: var(--background-container);
+    z-index: 999;
 }
 
 #bottomNav ul {

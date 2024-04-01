@@ -1,3 +1,24 @@
+.gastosContainer h1 {
+    margin-inline: 1rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+
 strong {
     color: var(--color-emphasis);
+}
+
+.gastoItem {
+    margin-bottom: 1rem;
+}
+
+.gastoItem p {
+    opacity: .75;
+    font-size: 14px;
+}
+
+.gastoItem > article > div {
+    display: flex;
+    justify-content: space-between;
 }

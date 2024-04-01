@@ -1,6 +1,18 @@
 #nuevoGastoForm {
-    position: absolute;
-    top: -70%;
+    transition: all 250ms ease-in-out;
+}
+
+#nuevoGastoForm.active {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    z-index: 0;
+}
+
+#nuevoGastoForm form {
+    position: fixed;
+    bottom: 15%;
     left: 50%;
     width: 90%;
     max-height: 0;
@@ -12,26 +24,13 @@
     box-shadow: 0 -3px 10px 2px rgba(0,0,0,0.5);
 }
 
-#nuevoGastoForm.active {
-    max-height: 500px;
-    top: -500%;
-}
-
-#nuevoGastoForm form {
+#nuevoGastoForm.active form {
     padding: 0.5rem;
-    position: relative;
+    max-height: 370px;
 }
 
-#nuevoGastoForm form::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(70%) rotate(45deg);
-    width: 2rem;
-    height: 2rem;
-    background-color: var(--background-container);
-    z-index: -1;
+#nuevoGastoForm.active.expanded form {
+    max-height: 440px;
 }
 
 .form-group {
@@ -41,10 +40,26 @@
     margin-bottom: 0.5rem;
 }
 
+.form-group.disabled {
+    opacity: .5;
+}
+
+.flex-form-group {
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
 .form-group input,
 .form-group select {
     font-size: 1rem;
     padding: .25rem;
     background-color: var(--form-field-background);
     border-radius: 5px;
+}
+
+.form-group button {
+    margin-top: .5rem;
+    width: fit-content;
+    margin-left: auto;
 }
