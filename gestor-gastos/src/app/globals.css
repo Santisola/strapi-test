@@ -93,3 +93,9 @@ body {
     transform: rotate(360deg);
   }
 }
+
+@media screen and (min-width: 672px) {
+  .container {
+    margin-inline: auto;
+  }
+}

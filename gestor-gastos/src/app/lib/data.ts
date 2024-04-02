@@ -28,7 +28,7 @@ export async function getGastos() {
     });
 }
 
-export async function getGastosPorTipo(mes:string) {
+export async function getGastosPorTipo(mes:string|null=null) {
     noStore();
     const fetchRes = await fetch(`${STRAPI_ENDPOINT}/tipos-de-gastos?populate=*`)
     const rta = await fetchRes.json();
@@ -61,6 +61,8 @@ export async function getGastosPorTipo(mes:string) {
         return totalGastosB - totalGastosA
     })
 
+    console.log('GASTOS POR TIPO', orderedGastos);
+    
     return orderedGastos;
 }
 

@@ -30,4 +30,7 @@
 
 #bottomNav ul li a {
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

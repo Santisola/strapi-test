@@ -18,3 +18,10 @@
 .tiposDeGastosList > li strong{
     color: var(--color-emphasis);
 }
+
+@media screen and (min-width: 672px) {
+    .tiposDeGastosList {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+}
