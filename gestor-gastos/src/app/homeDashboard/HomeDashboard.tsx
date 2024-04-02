@@ -1,11 +1,13 @@
 import React from 'react'
-import { getGastos, getGastosPorTipo } from '../lib/data'
-import { TiposDeGastoList } from '../ui/TiposDeGastoList/TiposDeGastoList';
+import { getGastos, getMesesConGastos } from '../lib/data'
+import { TiposDeGastoList } from './components/TiposDeGastoList/TiposDeGastoList';
+import { MonthFilter } from './components/MonthFilter';
 
-export const HomeDashboard = async () => {
+export const HomeDashboard = async ({mes}: {mes:string}) => {
   const gastos = await getGastos();
-  const tiposDeGastos = await getGastosPorTipo();
+  const meses = getMesesConGastos(gastos);
 
+  
   const gastosPorMes = (mes: number) => gastos.filter((gasto:any) => gasto.fecha.split('-')[1] == mes);
 
   const totalPorMes = (mes:number) => {
@@ -23,12 +25,16 @@ export const HomeDashboard = async () => {
 
   return (
     <>
+    <div className="container form-group monthFilterContainer">
+      <MonthFilter meses={meses} />
+    </div>
+
     <div className="container">
       Este mes gastaste: <br />
-      <h2><strong>${totalPorMes((new Date()).getMonth() + 1)}</strong></h2>
+      <h2><strong>${totalPorMes(parseInt(mes))}</strong></h2>
     </div>
     
-    <TiposDeGastoList gastos={tiposDeGastos} />
+    <TiposDeGastoList mes={mes} />
     </>
   )
 }

@@ -2,33 +2,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: var(--background-container);
-    margin-bottom: 1rem;
+    padding: .5rem 1rem 3rem;
+    background: linear-gradient(180deg, var(--background-container) 40%, #0a0a0a 100%);
+    margin-bottom: -2rem;
 }
 
-header h1{
+header h1 strong{
     color: var(--color-emphasis);
-}
-
-header nav ul {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-}
-
-header nav ul li {
-    transition: all 150ms ease;
-}
-
-header nav ul li:not(.active):hover {
-    color: var(--color-emphasis);
-}
-
-header nav ul li.active a {
-    color: var(--color-emphasis);
-}
-
-header nav ul li.active a::after {
-    content: '';
+    font-weight: inherit;
 }

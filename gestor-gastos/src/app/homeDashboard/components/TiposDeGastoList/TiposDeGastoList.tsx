@@ -1,7 +1,11 @@
 import React from 'react'
+import { getGastosPorTipo } from '@/app/lib/data';
+
 import './styles.css'
 
-export const TiposDeGastoList = ({gastos}: any) => {
+export const TiposDeGastoList = async ({mes}:any) => {
+  const gastos = await getGastosPorTipo(mes);
+  
   const tiposDeGasto = gastos.map((gasto:any) => {
     let categoryTotal = 0;
     gasto.gastos.forEach((item:any) => {

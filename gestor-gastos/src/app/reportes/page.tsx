@@ -1,8 +1,12 @@
+import { Header } from "../ui/Header";
+
 export default function Reportes() {
     return (
-      <div>
-        <h1>Reportes</h1>
-      </div>
+      <section>
+        <Header>
+          Reportes
+        </Header>
+      </section>
     );
   }
   

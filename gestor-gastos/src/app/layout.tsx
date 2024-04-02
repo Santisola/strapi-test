@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "./ui/header/Header";
 import { BottomNav } from "./ui/BottomNav/BottomNav";
 import { getGastosPorTipo } from "./lib/data";
 
@@ -22,7 +21,6 @@ export default async function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<Header />
 				<main>
 					{children}
 				</main>

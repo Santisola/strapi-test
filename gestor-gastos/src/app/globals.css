@@ -26,6 +26,7 @@
 
 body {
   min-height: 100vh;
+  padding-bottom: 65px;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -56,4 +57,8 @@ body {
   font-weight: 700;
   padding: .25rem 1rem;
   border-radius: 5px;
+}
+
+.form-group.monthFilterContainer {
+  margin-bottom: 1rem;
 }

@@ -43,8 +43,8 @@ export const FormNuevoGasto = ({
           },
         )}>
           <label htmlFor="tipoGasto">Tipo de gasto</label>
-          <select name="tipoGasto" id="tipoGasto" disabled={newCategory}>
-            <option selected disabled>...</option>
+          <select name="tipoGasto" id="tipoGasto" disabled={newCategory} defaultValue={'...'}>
+            <option disabled value={'...'}>...</option>
             {
               tiposDeGastos.map((tipoGasto: any, i: number) => (
                 <option key={i} value={tipoGasto.id}>{tipoGasto.category}</option>

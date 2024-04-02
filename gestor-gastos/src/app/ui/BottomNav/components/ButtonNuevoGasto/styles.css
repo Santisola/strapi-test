@@ -1,18 +1,20 @@
 .btnNuevoGasto {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     background-color: var(--color-emphasis);
     color: #0a0a0a;
-    border: solid 6px #0a0a0a;
+    /* border: solid 6px #0a0a0a; */
 
     position: absolute;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-30%);
     
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    box-shadow: 0 0 7px 0px #9eff4f;
 }
 
 .btnNuevoGasto svg {
