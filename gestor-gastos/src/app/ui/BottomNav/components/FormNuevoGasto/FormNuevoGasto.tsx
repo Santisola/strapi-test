@@ -5,9 +5,14 @@ import { newGasto } from '@/app/lib/actions';
 
 export const FormNuevoGasto = ({
   isOpen,
-  tiposDeGastos
+  tiposDeGastos,
+  onFormFinish
 }: any) => {
   const [newCategory, setNewCategory] = useState(false);
+
+  const handleSubmit = () => {
+    onFormFinish();
+  }
   
   return (
     <section
@@ -19,7 +24,7 @@ export const FormNuevoGasto = ({
         },
       )}
     >
-      <form action={newGasto}>
+      <form action={newGasto} onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="gasto">Gasto</label>
           <input

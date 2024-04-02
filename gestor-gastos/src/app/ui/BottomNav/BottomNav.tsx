@@ -21,6 +21,7 @@ export const BottomNav = ({ tiposDeGastos }: any) => {
         <FormNuevoGasto
           isOpen={isNuevoGastoActive}
           tiposDeGastos={tiposDeGastos}
+          onFormFinish={() => setIsNuevoGastoActive(false)}
         />
         <ul>
           <li className={path === "/" ? "active" : ""}>
