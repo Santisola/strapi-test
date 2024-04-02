@@ -62,3 +62,34 @@ body {
 .form-group.monthFilterContainer {
   margin-bottom: 1rem;
 }
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader span {
+  font-size: 0;
+  width: 3rem;
+  height: 3rem;
+  border: solid 3px rgba(0, 0, 0, 0.5);
+  border-left-color: var(--color-emphasis);
+  border-radius: 50%;
+  animation: spin 750ms infinite ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -12,6 +12,7 @@
     background-color: var(--background-container);
     border-radius: 5px;
     min-width: 28%;
+    flex-shrink: 0;
 }
 
 .tiposDeGastosList > li strong{
